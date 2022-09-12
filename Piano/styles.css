@@ -1,0 +1,236 @@
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Futura", sans-serif;
+}
+
+body {
+    /* margin: 0; padding: 0; display: flex; justify-content: center; height: 100vh; align-item: center; background-color:rgb(0, 0, 0); */
+    display: flex;
+    /* background: #000;   diff background*/
+    
+    /* background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(0, 0, 0)); */
+    
+    /* background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,244,0,1) 100%, rgba(255,0,87,1) 100%, rgba(255,53,182,1) 100%, rgba(0,212,255,1) 100%); */
+
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgb(250, 0, 117) 35%, rgb(0, 215, 215) 100%, rgba(255,0,87,1) 100%, rgba(255,53,182,1) 100%, rgba(199,255,141,1) 100%);
+    
+    min-height: 20vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+  position: absolute;
+  justify-content: center;
+}
+
+.content h2 {
+  color: #fff;
+  font-size: 4em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.content h2:nth-child(1) { color: transparent; -webkit-text-stroke: 2px #bafe00; }
+.content h2:nth-child(2) { color: #f6ffc6; animation: animate 2s ease-in-out infinite; }
+@keyframes animate {
+  0%, 100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 21%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 41%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+
+/* body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-item: center;
+    background-color:rgb(0, 0, 0);
+} */
+
+#piano{
+    height: 290px;
+    padding: 90px 30px 0 30px;
+    /* background-color: #008080; */
+    background-image: linear-gradient(to bottom right, rgb(242, 255, 0), rgb(0, 255, 225));
+    border-radius: 10px;
+}
+
+/* .animate-charcter
+{
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg, #231557 5%, #44107a 29%, #ff1361 67%, #fff800 100% );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 50% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 20px;
+    font: italic bold 30px Futura, sans-serif;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+} */
+
+
+.title-word {
+    animation: color-animation 4s linear infinite;
+  }
+  
+  .title-word-1 {
+    --color-1: #ff00b3;
+    --color-2: rgb(195, 255, 84);
+    --color-3: #000000;
+  }
+  .title-word-2 {
+    --color-1: #ff00cc;
+    --color-2: #90ff45;
+    --color-3: #ffffff;
+  } 
+  .title-word-3 {
+    --color-1: #ff42a4;
+    --color-2: #acff28;
+    --color-3: #000000;
+  }
+  
+  .title-word-4 {
+    --color-1: #ff0088;
+    --color-2: #e9fd03;
+    --color-3: #ffffff;
+  }
+  
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+  
+  /* Here are just some visual styles. 🖌 */
+  
+  .container {
+    display: grid;
+    place-items: center;  
+    text-align: center;
+    height: 9vh
+  }
+  
+  .title {
+    font-family: "Century Gothic", sans-serif;
+    font-weight: 50;
+    font-size: 3vw;
+    text-transform: uppercase; 
+  }
+
+/* .text-heading{
+    font: italic bold 10px Futura, sans-serif;
+    
+} */
+
+.keys{
+    position: relative;
+}
+ 
+.white-keys{
+    display: flex;
+
+}
+
+.black-keys{
+    position: relative;
+    display: flex;
+}
+
+.white-key{
+    width: 68px;
+    height: 280px;
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    border: solid #000 2px;
+    box-sizing: border-box;
+}
+
+.black-key{
+    width: 38px;
+    height: 160px;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+    position: absolute;
+    background: #000;
+}
+
+.black-key:nth-child(1){
+    left:48px;
+}
+.black-key:nth-child(2){
+    left:117px;
+}
+.black-key:nth-child(3){
+    left:253px;
+}
+.black-key:nth-child(4){
+    left:320px;
+}
+.black-key:nth-child(5){
+    left:389px;
+}
+.black-key:nth-child(6){
+    left:525px;
+}
+.black-key:nth-child(7){
+    left:594px;
+}
+.black-key:nth-child(8){
+    left:662px;
+}
+.black-key:nth-child(9){
+    left:797px;
+}
+.black-key:nth-child(10){
+    left:865px;
+}
+
